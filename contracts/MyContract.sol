@@ -21,8 +21,42 @@ contract MyContract {
         uint256 myUint256;
         string myString;
     }
-
     MyStruct public myStruct = MyStruct(1, "Ola Mundo!");
+
+    struct Book {
+        string title;
+        string author;
+    }
+
+
+    // Mappings
+    mapping(uint => string) names;
+    mapping(uint => Book) public books;
+    // Mapping of Mappings
+    mapping(address => mapping(uint => Book)) public myBooks;
+
+
+    constructor() {
+        names[1] = "Adam";
+        names[2] = "Bruce";
+        names[3] = "Carl";
+    }
+
+    function addBook(
+        uint _id,
+        string memory _title,
+        string memory _author
+    ) public {
+        books[_id] = Book(_title, _author);
+    }
+
+    function addMyBook(
+        uint _id,
+        string memory _title,
+        string memory _author
+    ) public {
+        myBooks[msg.sender][_id] = Book(_title, _author);
+    }
 
     function addValue(string memory _value) public {
         values.push(_value);
@@ -31,7 +65,6 @@ contract MyContract {
     function valueCount() public view returns(uint) {
         return values.length;
     }
-
 
     //Local Variables
     function getValue() public pure returns(uint) {
