@@ -11,6 +11,25 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_occupant",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "Occupy",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "book",
 				"outputs": [],
@@ -25,6 +44,19 @@
 						"internalType": "address payable",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "status",
+				"outputs": [
+					{
+						"internalType": "enum HotelRoom.Statuses",
+						"name": "",
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -59,11 +91,11 @@
 	},
 	"sources": {
 		"contracts/HotelRoom.sol": {
-			"keccak256": "0xd3eef3fab648c0c34b408b8491c0f347ae6d4b9a56406462973ad23790451f41",
+			"keccak256": "0xe904da24afa6e513e91f02215e03bdbf6153a51322cfe59ddfe65a92a008ce3d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a55a5d709b146eac00ff3e45bf486b116e038c2fa8f3d6840532ae43cf1b5d3a",
-				"dweb:/ipfs/QmcfSgJcjite4APcPSmysRfEHVpivgvxsjttADZzAUwLEY"
+				"bzz-raw://2c4d7828ef6cba08eea736b12dbe113864098f54a1f500dcfffa9a2084d90a16",
+				"dweb:/ipfs/QmbtdYT8GAcQXijERL4Mdeue1n932KKpMZqKbVhouKZSAT"
 			]
 		}
 	},
